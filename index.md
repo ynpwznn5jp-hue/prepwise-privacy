@@ -21,13 +21,18 @@ Who sees what: preps you share with Friends are seen only by people you added as
 Everyone are seen by anyone signed in to Prepwise. A shared grocery list is seen only by people who have its code.
 
 ## Feedback
-If you send feedback from the app, your note goes to the same database with the app version and phone model, plus
-your name if you are signed in. Only the developer can read it.
+If you send feedback from the app, your note goes to the same database with the app version, phone model, iOS
+version and a random id for this install (so repeated notes can be grouped), plus your name if you are signed in.
+Only the developer can read it.
 
 ## AI features
 Recipe search and import use your own Anthropic or OpenAI API key, which stays in your phone's Keychain. When you
-use those features, your request and your food preferences are sent directly from your phone to the provider you
-chose, under that provider's terms. Prepwise does not see or keep them.
+use those features, your request, any photo you pick, and your food preferences (goals, macros, allergies, likes and
+rules) are sent directly from your phone to the provider you chose, under that provider's terms. Saving a key is how
+you agree to that, and removing it stops it. Prepwise does not see or keep any of it.
+
+## Reports and moderation
+Reports you send are read by the developer, who removes content and people that break the community guidelines.
 
 ## Nutrition and barcodes
 Ingredient names are sent to the USDA FoodData Central database to look up nutrition. Scanned barcodes are looked
