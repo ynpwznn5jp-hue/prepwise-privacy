@@ -1,6 +1,6 @@
 # Prepwise privacy policy
 
-Last updated: October 6, 2026
+Last updated: October 10, 2026
 
 Prepwise is a meal prep app made by Chris Dunn. This page says plainly what it keeps, where, and why.
 
@@ -26,10 +26,16 @@ version and a random id for this install (so repeated notes can be grouped), plu
 Only the developer can read it.
 
 ## AI features
-Recipe search and import use your own Anthropic or OpenAI API key, which stays in your phone's Keychain. When you
-use those features, your request, any photo you pick, and your food preferences (goals, macros, allergies, likes and
-rules) are sent directly from your phone to the provider you chose, under that provider's terms. Saving a key is how
-you agree to that, and removing it stops it. Prepwise does not see or keep any of it.
+Recipe search, import and grocery help use Claude. There are two ways it can run:
+
+- **Prepwise's Claude (signed in, no key).** Your request, any photo you pick, and your food preferences (goals,
+  macros, allergies, likes and rules) go through Prepwise's server to Anthropic. The server passes them on and keeps
+  only a count of how many requests you made today, to enforce a fair daily limit. Anthropic handles the request
+  under its commercial terms, which do not allow training on it.
+- **Your own key.** If you save your own Anthropic or OpenAI key (kept in your phone's Keychain), the same
+  information goes directly from your phone to that provider under your account, and Prepwise sees none of it.
+
+Signing in or saving a key is how you agree to this; signing out or removing the key stops it.
 
 ## Reports and moderation
 Reports you send are read by the developer, who removes content and people that break the community guidelines.
