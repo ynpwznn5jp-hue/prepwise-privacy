@@ -58,10 +58,12 @@ recognition (on your phone when it supports that, otherwise through Apple).
 Reports you send are read by the developer, who removes content and people that break the community guidelines.
 
 ## Nutrition and barcodes
-Food and ingredient names are sent to the USDA FoodData Central database to look up nutrition. When you are signed
-in, those lookups go through Prepwise's server, which keeps the database's answer so the same food is not fetched
-twice; it does not record who asked. Scanned barcodes are looked up on Open Food Facts. None of these lookups
-includes anything about you.
+Food and ingredient names are sent to the USDA FoodData Central database to look up nutrition. Those lookups go
+through Prepwise's server, which keeps the database's answer so the same food is not fetched twice. It does not record
+who asked. If you are not signed in, it keeps a scrambled form of your network address for up to a day, only to cap
+how many lookups one address can make in an hour. If you add your own USDA key, lookups go straight from your phone to
+USDA instead. Scanned barcodes are looked up on Open Food Facts. None of these lookups includes anything else about
+you.
 
 ## Apple Health
 Everything here is optional and off until you turn it on.
