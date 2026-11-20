@@ -1,15 +1,16 @@
 # Prepwise privacy policy
 
-Last updated: October 10, 2026
+Last updated: November 20, 2026
 
-Prepwise is a meal prep app made by Chris Dunn. This page says plainly what it keeps, where, and why.
+Prepwise is a food tracking and meal prep app made by Chris Dunn. This page says plainly what it keeps, where, and why.
 
 ## On your phone
-Your profile, recipes, grocery lists, pantry, prep plans and meal ratings are stored on your iPhone. They stay there
-unless you choose to share something.
+Your profile, food diary, saved foods, daily targets, recipes, grocery lists, pantry, prep plans and meal ratings are
+stored on your iPhone. They stay there unless you choose to share something.
 
 ## If you sign in
-Signing in with Apple is optional. It is only needed to share a grocery list or to use Friends. When you sign in,
+Signing in with Apple is optional. It is needed to share a grocery list, to use Friends, and to use Prepwise's
+Claude without a key of your own. When you sign in,
 Prepwise stores, on a private database run on Supabase:
 
 - your Apple account's user id, and the email address Apple provides (it may be a private relay address),
@@ -26,7 +27,7 @@ version and a random id for this install (so repeated notes can be grouped), plu
 Only the developer can read it.
 
 ## AI features
-Recipe search, import and grocery help use Claude. There are two ways it can run:
+Logging food by voice or photo, recipe search, import and grocery help use Claude. There are two ways it can run:
 
 - **Prepwise's Claude (signed in, no key).** Your request, any photo you pick, and your food preferences (goals,
   macros, allergies, likes and rules) go through Prepwise's server to Anthropic. The server passes them on and keeps
@@ -37,16 +38,40 @@ Recipe search, import and grocery help use Claude. There are two ways it can run
 
 Signing in or saving a key is how you agree to this; signing out or removing the key stops it.
 
+**Logging food by voice, photo or Siri.** When you log by voice, the short recording goes through Prepwise's server
+to a speech to text service (the Whisper model, run by Groq) and comes back as words. If you are not signed in or are
+offline, Apple's speech recognition is used instead (on your phone when it supports that, otherwise through Apple).
+With Siri, Siri hears you and hands Prepwise the words. Those words, or the photo you take of a meal, are sent to
+Claude as described above so it can work out which foods and how much. To help spell and match your own food, the
+names of your recipes, saved foods and recently logged foods go along with the recording and the words. Prepwise's
+server does not keep the recording, the words, the photo or the answer; it keeps only a count of how many requests you
+made today. The foods are then saved in your diary on your phone.
+
+## Cook mode voice
+When cook mode reads steps aloud with the natural voice, the text of each step goes through Prepwise's server to a
+text to speech service (run by Groq) and comes back as audio. The audio is kept on your phone so each step is only
+fetched once. Nothing about you goes with it. You can turn the natural voice off in Settings; the phone's own voice is
+used instead and nothing leaves the phone. Hands-free commands in cook mode ("next", "back") use Apple's speech
+recognition (on your phone when it supports that, otherwise through Apple).
+
 ## Reports and moderation
 Reports you send are read by the developer, who removes content and people that break the community guidelines.
 
 ## Nutrition and barcodes
-Ingredient names are sent to the USDA FoodData Central database to look up nutrition. Scanned barcodes are looked
-up on Open Food Facts. Neither lookup includes anything about you.
+Food and ingredient names are sent to the USDA FoodData Central database to look up nutrition. When you are signed
+in, those lookups go through Prepwise's server, which keeps the database's answer so the same food is not fetched
+twice; it does not record who asked. Scanned barcodes are looked up on Open Food Facts. None of these lookups
+includes anything about you.
 
 ## Apple Health
-If you turn it on, Prepwise writes the meals you log (calories, protein, carbs, fat) to Apple Health. It never reads
-your Health data and never sends it anywhere.
+Everything here is optional and off until you turn it on.
+
+- **Writing.** Prepwise can write the food you log (calories, protein, carbs, fat and other nutrients) to Apple Health.
+- **Reading.** To adjust your daily targets, Prepwise can read the active calories you burn, your workouts and your
+  body weight from Apple Health.
+
+What it reads is used on your phone to work out your targets. It is never sent to Prepwise's server, to Claude, or to
+anyone else, and it is never used for advertising.
 
 ## No tracking, no ads
 Prepwise has no ads, no analytics SDKs, and does not track you across apps or websites. Nothing is sold.
