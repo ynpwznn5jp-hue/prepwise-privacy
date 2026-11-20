@@ -62,8 +62,8 @@ Food and ingredient names are sent to the USDA FoodData Central database to look
 through Prepwise's server, which keeps the database's answer so the same food is not fetched twice. It does not record
 who asked. If you are not signed in, it keeps a scrambled form of your network address for up to a day, only to cap
 how many lookups one address can make in an hour. If you add your own USDA key, lookups go straight from your phone to
-USDA instead. Scanned barcodes are looked up on Open Food Facts. None of these lookups includes anything else about
-you.
+USDA instead. Scanned barcodes, and the words you type into food search, are also looked up on Open Food Facts,
+straight from your phone. None of these lookups includes anything else about you.
 
 ## Apple Health
 Everything here is optional and off until you turn it on.
